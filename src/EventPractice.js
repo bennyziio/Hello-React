@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 //함수형 컴포넌트로 구현해보기
 const EventPractice = () => {
   const [form, setForm] = useState({
-    username: "",
-    message: "",
+    username: '',
+    message: '',
   });
   const { username, message } = form;
   const onChange = (e) => {
@@ -15,14 +15,14 @@ const EventPractice = () => {
     setForm(nextForm);
   };
   const onClick = () => {
-    alert(username + ": " + message);
+    alert(username + ': ' + message);
     setForm({
-      username: "",
-      message: "",
+      username: '',
+      message: '',
     });
   };
   const onKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       onClick();
     }
   };
